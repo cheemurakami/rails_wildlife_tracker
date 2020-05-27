@@ -29,11 +29,11 @@ class AnimalsController < ApplicationController
   end
 
   def update
-    @animal = Animal.find(param[:id])
+    @animal = Animal.find(params[:id])
     if @animal.update(animal_params)
       redirect_to animals_path
     else
-      ender :edit
+      render :edit
     end
   end
 
@@ -47,5 +47,5 @@ class AnimalsController < ApplicationController
     def animal_params
       params.require(:animal).permit(:kind)
     end
-    
+
 end

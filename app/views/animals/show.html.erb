@@ -1,8 +1,8 @@
-<h1><%= @album.name %></h1>
+<h1><%= @animal.kind %></h1>
 
-<p><%= link_to "Edit", edit_album_path(@album) %></p>
-<p><%= link_to "Delete", album_path(@album),
+<p><%= link_to "Edit", edit_animal_path(@animal) %></p>
+<p><%= link_to "Delete", animal_path(@animal),
                          :data => {:confirm => "You sure?",
                                    :method => "delete"} %></p>
 
-<p><%= link_to "Return to albums", albums_path %></p>
+<p><%= link_to "Return to animals", animals_path %></p>
